@@ -6,6 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
+import com.guo.yy.relearning.MyLog
 import com.guo.yy.relearning.TAG
 
 /**
@@ -29,42 +30,42 @@ class WrapperLifecycle(bound: LifecycleOwner) : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onWrapperCreate() {
-        Log.i(TAG, "onWrapperCreate")
+        MyLog.i(TAG, "onWrapperCreate")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onWrapperStart() {
-        Log.i(TAG, "onWrapperStart")
+        MyLog.i(TAG, "onWrapperStart")
 
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onWrapperResume() {
-        Log.i(TAG, "onWrapperResume")
+        MyLog.i(TAG, "onWrapperResume")
 
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     fun onWrapperPause() {
-        Log.i(TAG, "onWrapperPause")
+        MyLog.i(TAG, "onWrapperPause")
 
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onWrapperStop() {
-        Log.i(TAG, "onWrapperStop")
+        MyLog.i(TAG, "onWrapperStop")
 
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onWrapperDestory() {
-        Log.i(TAG, "onWrapperDestory")
+        MyLog.i(TAG, "onWrapperDestory")
 
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     fun onWrapperAny() {
-        Log.i(TAG, "onWrapperAny")
+        MyLog.i(TAG, "onWrapperAny")
 
     }
 
