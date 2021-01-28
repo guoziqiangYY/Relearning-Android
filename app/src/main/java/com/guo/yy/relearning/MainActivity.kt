@@ -1,11 +1,13 @@
 package com.guo.yy.relearning
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import com.guo.yy.relearning.activity.BaseActivity
 import com.guo.yy.relearning.activity.WrapperLifecycle
+import com.guo.yy.relearning.activity.fragment.MyFragmentActivity
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : BaseActivity() {
 
@@ -16,7 +18,7 @@ class MainActivity : BaseActivity() {
     // some transient state for the activity instance
     var gameState: String? = null
 
-    var wrapperLifecycle:WrapperLifecycle ?= null
+    var wrapperLifecycle: WrapperLifecycle? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +26,24 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         gameState = savedInstanceState?.getString(GAME_STATE_KEY)
         textView = findViewById<TextView>(R.id.tv_helloworld)
-         wrapperLifecycle = WrapperLifecycle(this)
+        wrapperLifecycle = WrapperLifecycle(this)
         MyLog.i(TAG, "onCreate gameState:${gameState}")
+
+
+//        btn_fragment
+        initBtn()
+
+
+    }
+
+    private fun initBtn() {
+
+        btn_fragment.setOnClickListener{
+            startActivity(Intent(this,MyFragmentActivity::class.java))
+        }
+
+
+
 
     }
 
