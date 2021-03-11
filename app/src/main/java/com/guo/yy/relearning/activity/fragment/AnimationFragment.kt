@@ -22,11 +22,6 @@ class AnimationFragment:Fragment(R.layout.layout_fragment_anim) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext()).inflateTransition(R.transition.shared_image)
-//        sharedElementEnterTransition = DetailTransition(requireContext(),null)
-//        exitTransition = Fade()
-//        enterTransition = Fade()
-//        sharedElementReturnTransition = DetailTransition(requireContext(),null)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

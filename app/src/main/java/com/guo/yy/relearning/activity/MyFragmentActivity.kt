@@ -1,13 +1,12 @@
-package com.guo.yy.relearning.activity.fragment
+package com.guo.yy.relearning.activity
 
 import android.os.Bundle
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.os.bundleOf
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
-import androidx.transition.TransitionInflater
 import com.guo.yy.relearning.R
-import com.guo.yy.relearning.activity.BaseActivity
+import com.guo.yy.relearning.activity.fragment.CreateAFragment
+import com.guo.yy.relearning.activity.fragment.MyFragmentFactory
 
 /**
  *    author : Guo
@@ -18,7 +17,8 @@ class MyFragmentActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //如果要设置自定义的FragmentFactory，需要在super.onCreat()前调用，如想要再次更换，再子的在更换
-        supportFragmentManager.fragmentFactory = MyFragmentFactory("restore arg")
+        supportFragmentManager.fragmentFactory =
+            MyFragmentFactory("restore arg")
         super.onCreate(savedInstanceState)
 
 

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Relearning-Android</string>
+    <string name="caution">注意</string>
+    <string name="settings">设置</string>
+    <string name="alarm">警告</string>
+    <string name="bug">bug</string>
+    <string name="shortcuts_short">aaaa</string>
+    <string name="shortcuts_long">bbb</string>
+    <string name="shortcuts_detail">ccc</string>
 </resources>

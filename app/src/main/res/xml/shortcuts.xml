@@ -1,0 +1,27 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    如果enable为true，则shortcutDisabledMessage 无效，
+如果enable为false，则则shortcutDisabledMessage会向用户说明为何禁用该快捷方式
+    此种情况仅限于，用户再桌面长按，将快捷方式单独放置到桌面上，当下次更新，代码关闭的enbaled为false，
+    此时这个桌面快捷图标将不能使用，点击会弹出shortcutDisabledMessage
+
+    shortcutShortLabel->桌面小图标上的字
+    shortcutLongLabel ->长按
+-->
+    <shortcut
+        android:shortcutId="compose"
+        android:enabled="true"
+        android:icon="@drawable/icon_airepay"
+        android:shortcutShortLabel="@string/shortcuts_short"
+        android:shortcutLongLabel="@string/shortcuts_long"
+        android:shortcutDisabledMessage="@string/shortcuts_detail">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.guo.yy.relearning"
+            android:targetClass="com.guo.yy.relearning.activity.MyFragmentActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

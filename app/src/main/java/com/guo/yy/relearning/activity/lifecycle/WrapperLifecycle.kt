@@ -1,4 +1,4 @@
-package com.guo.yy.relearning.activity
+package com.guo.yy.relearning.activity.lifecycle
 
 import android.content.Context
 import android.util.Log
