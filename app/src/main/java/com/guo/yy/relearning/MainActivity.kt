@@ -1,6 +1,9 @@
 package com.guo.yy.relearning
 
+import android.app.Activity
+import android.app.Application
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
@@ -8,12 +11,17 @@ import android.graphics.drawable.Icon
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.guo.yy.relearning.activity.BaseActivity
 import com.guo.yy.relearning.activity.MyActionBarActivity
 import com.guo.yy.relearning.activity.lifecycle.WrapperLifecycle
 import com.guo.yy.relearning.activity.MyFragmentActivity
+import com.guo.yy.relearning.test.A
+import com.guo.yy.relearning.test.B
+import com.guo.yy.relearning.test.C
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -44,7 +52,38 @@ class MainActivity : BaseActivity() {
         initBtn()
 
 
+        val a = A()
+
+        a.a()
+
+
+        test1(a)
+
+        test2(a)
+
+
+
+        val application = Application()
+
+        val application1 = Application()
+
+        Log.e("gzq","application:${application}== ${application1}")
+
+        Toast.makeText(application,"1",Toast.LENGTH_LONG).show()
+        Toast.makeText(application1,"2",Toast.LENGTH_LONG).show()
+
     }
+
+    fun test1(a: C){
+        a.a()
+    }
+
+
+    fun test2(b: B){
+        b.a()
+    }
+
+
 
     private fun initBtn() {
 
